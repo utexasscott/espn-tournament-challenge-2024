@@ -4,7 +4,7 @@ $(document).ready(function() {
         "STET": "Stetson",
         "FAU": "Florida Atlantic",
         "NU": "Northwestern",
-        "SDSU": "San Diego State",
+        "SDSU": "San Diego St",
         "UAB": "UAB",
         "YALE": "Yale",
         "AUB": "Auburn",
@@ -12,20 +12,20 @@ $(document).ready(function() {
         "DUQ": "Duquesne",
         "ILL": "Illinois",
         "MHS": "Morehead State",
-        "WSU": "Washington State",
+        "WSU": "Washington St",
         "DRKE": "Drake",
         "ISU": "Iowa State",
         "SDST": "S Dakota St",
         "HOU": "Houston",
         "LW": "Longwood",
-        "TAM": "Texas A&M",
+        "TA&M": "Texas A&M",
         "NEB": "Nebraska",
         "WIS": "Wisconsin",
         "JMU": "James Madison",
         "DUKE": "Duke",
         "VMT": "Vermont",
         "TTU": "Texas Tech",
-        "NCSU": "North Carolina State",
+        "NCSU": "NC State",
         "UK": "Kentucky",
         "OAK": "Oakland",
         "COLO": "Colorado",
@@ -58,7 +58,8 @@ $(document).ready(function() {
         "TEX": "Texas",
         "CSU": "Colorado St",
         "TENN": "Tennessee",
-        "FLA": "Florida"
+        "FLA": "Florida",
+        "GCU": "Grand Canyon"
     };
 
     const teamSeeds = {};
