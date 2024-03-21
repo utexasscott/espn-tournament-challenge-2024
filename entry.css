@@ -1,0 +1,30 @@
+.BracketOutcomeBlank-wrapper {
+	color: #999!important;
+}
+.BracketOutcomeBlank-placeholder {
+	background: transparent!important;
+	font-size: 13px!important;
+}
+.BracketOutcomeBlank-wrapper .BracketOutcome-metadata {
+	font-size: 10px!important;
+	margin: 0 4px 0 12px;
+}
+
+.improved-activeWinning {
+	border: 3px solid #4a9122!important;
+}
+.improved-activeLosing {
+	border: 3px solid #d30c0c!important;
+}
+.improved-activeTie {
+	border: 3px solid #f0b20c!important;
+}
+
+.improved-won {
+	border: 1px solid #4a9122!important;
+	background-color: #b2e0b2!important;
+}
+.improved-lost {
+	border: 1px solid #d30c0c!important;
+	background-color: #ffdbdb!important;
+}
