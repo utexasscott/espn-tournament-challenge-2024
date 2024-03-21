@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const teamAcronyms = {
-        "CONN": "Connecticut",
+        "CONN": "UConn",
         "STET": "Stetson",
         "FAU": "Florida Atlantic",
         "NU": "Northwestern",
@@ -15,7 +15,7 @@ $(document).ready(function() {
         "WSU": "Washington State",
         "DRKE": "Drake",
         "ISU": "Iowa State",
-        "SDSU": "South Dakota State",
+        "SDST": "S Dakota St",
         "HOU": "Houston",
         "LW": "Longwood",
         "TAM": "Texas A&M",
@@ -36,7 +36,7 @@ $(document).ready(function() {
         "MSU": "Michigan St",
         "SMC": "Saint Mary's",
         "ALA": "Alabama",
-        "CHAR": "Charleston",
+        "COFC": "Charleston",
         "CLEM": "Clemson",
         "UNM": "New Mexico",
         "BAY": "Baylor",
@@ -57,7 +57,8 @@ $(document).ready(function() {
         "AKR": "Akron",
         "TEX": "Texas",
         "CSU": "Colorado St",
-        "TENN": "Tennessee"
+        "TENN": "Tennessee",
+        "FLA": "Florida"
     };
 
     const teamSeeds = {};
@@ -81,7 +82,7 @@ $(document).ready(function() {
 
                 // Get the placeholder elements
                 var placeholders = $(this).find('.BracketOutcomeBlank-placeholder');
-
+                
                 // Place the text into the placeholders
                 if (placeholders.length >= 2) {
                     // get team name from acronyms. if not found, use the acronym
@@ -95,11 +96,16 @@ $(document).ready(function() {
                     $(placeholders[1]).before("<div class='BracketOutcome-metadata'>" + team2Seed + "</div>");
                 }
                 else if (placeholders.length === 1) {
+                    // find the correct team name
+                    var correctTeamName = $(this).find('.BracketOutcome-label').text().trim();
                     var incorrectPath = $(this).find('.PickIncorrect-crossMark');
                     if (incorrectPath.length > 0) {
                         var team = teamAcronyms[teamAcronym2] || teamAcronym2;
                     } else {
                         var team = teamAcronyms[teamAcronym1] || teamAcronym1;
+                        if (team == correctTeamName) {
+                            team = teamAcronyms[teamAcronym2] || teamAcronym2;
+                        }
                     }
                     var teamSeed = teamSeeds[team] || '';
                     placeholders[0].textContent = team;
